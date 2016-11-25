@@ -1,0 +1,50 @@
+table
+{
+    background-color: dimgray;
+    color: white;
+    display: inline-block;
+    font-family: sans-serif;
+    height: 200px;
+    border: 1px solid white; 
+    margin: 10px; 
+}
+
+th
+{
+    width: 200px;
+    height: 30px;
+    vertical-align: middle;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 640px) {  
+    body
+    {
+        margin: 0;
+        padding: 0
+    }
+    
+    table
+    {
+        width: 100%;
+        margin: 0px;
+        height: 30px;
+    }
+    
+    th
+    {
+        width: 100%; 
+        
+    }
+    
+    tr
+    {
+        display: none;
+
+    }
+}
+
+
