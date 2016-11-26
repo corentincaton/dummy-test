@@ -36,6 +36,18 @@ $( document ).ready(function() {
             $($currentTable.rows).wrapAll( "<div class=wrappedRows></div>" );
         }
         
+        //Handle subcategores hiding according to screen resizing
+        $(window).resize(function(){
+            if($(window).width()>=640) 
+            {
+                $('.wrappedRows').css('display','block');
+            }
+            else
+            {
+                $('.wrappedRows').css('display','none');
+            }
+        });
+        
         $('table').click(function() {
             if(this.children[1]!=null && $(window).width() < 640){
                 $(this.children[1]).slideToggle();
