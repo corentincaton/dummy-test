@@ -19,14 +19,26 @@ th
     text-align: center;
 }
 
-div
+tr:before
 {
-    background-color: aquamarine;
+    content: "- ";
+    text-indent: -5px;
+}
+
+.wrappedRows
+{
+    display: block;
     margin: 10px;
 }
 
 
-@media screen and (max-width: 640px) {  
+@media screen and (max-width: 640px) { 
+    
+    .container 
+    {
+        width: 100%;
+    }
+    
     body
     {
         margin: 0;
@@ -37,19 +49,38 @@ div
     {
         width: 100%;
         margin: 0px;
-        height: 30px;
+        height: auto;
+        border-spacing: 1em;
     }
     
     th
-    {
-        width: 100%; 
-        
+    {   
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+        border-bottom: none;
     }
     
     tr
     {
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 3em;
+        border-bottom: 1px solid white;
+        text-indent: 15px;
+    }
+    
+    
+    .wrappedRows
+    {
         display: none;
-
+        margin: 0;
+        background-color: black;
+        text-transform: uppercase;
     }
 }
 

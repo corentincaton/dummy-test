@@ -21,7 +21,7 @@ $( document ).ready(function() {
                 if($subCategories != null) {
                     var numberOfSubCategories=Object.keys($subCategories).length;
                     for(var j=0; j<numberOfSubCategories; j++) {
-                        var $line = $("<tr></tr>").html(" - "+$subCategories[j].name);
+                        var $line = $("<tr></tr>").html($subCategories[j].name);
                         $table.append($line);
                     }
                 }   
@@ -29,15 +29,19 @@ $( document ).ready(function() {
             }
         }
         
+        //Wrap all rows in one div for each table
         var $allTables = $('table');
         for(var i=0; i<$allTables.length; i++) {
             var $currentTable = $allTables[i];
-            $($currentTable.rows).wrapAll( "<div></div>" );
+            $($currentTable.rows).wrapAll( "<div class=wrappedRows></div>" );
         }
         
-        
-    });  
-    
+        $('table').click(function() {
+            if(this.children[1]!=null && $(window).width() < 640){
+                $(this.children[1]).slideToggle();
+            }
+        });
+    });      
 });
 
 
