@@ -19,6 +19,12 @@ th
     text-align: center;
 }
 
+div
+{
+    background-color: aquamarine;
+    margin: 10px;
+}
+
 
 @media screen and (max-width: 640px) {  
     body

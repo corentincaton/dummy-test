@@ -25,10 +25,19 @@ $( document ).ready(function() {
                         $table.append($line);
                     }
                 }   
-                $table.appendTo(document.body);
+                $table.appendTo(document.body);            
             }
         }
-    });   
+        
+        var $allTables = $('table');
+        for(var i=0; i<$allTables.length; i++) {
+            var $currentTable = $allTables[i];
+            $($currentTable.rows).wrapAll( "<div></div>" );
+        }
+        
+        
+    });  
+    
 });
 
 
